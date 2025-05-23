@@ -29,7 +29,7 @@ class ChromeCastController(
     context: Context?
 ) : PlatformView, MethodChannel.MethodCallHandler, SessionManagerListener<Session>, PendingResult.StatusListener {
     private val channel = MethodChannel(messenger, "video_cast/chromeCast_$viewId")
-    private val chromeCastButton = MediaRouteButton(ContextThemeWrapper(context, R.style.Theme_AppCompat_NoActionBar))
+    private val chromeCastButton = MediaRouteButton(ContextThemeWrapper(context, android.R.style.Theme_DeviceDefault_NoActionBar))
     private val sessionManager = CastContext.getSharedInstance()?.sessionManager
 
     private val movie = 0
